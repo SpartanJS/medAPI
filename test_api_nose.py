@@ -1,4 +1,4 @@
-#! usr/bin/flaskenv python3
+#! usr/bin/medAPIenv python3
 # -*-coding:Utf-8 -*
 """ Infos : Medsense API Unittest
 
@@ -16,5 +16,5 @@ def test_request_response():
     #Confirm that the request response cycle completed successfuly
     assert_true(response.ok)
     #assert response.status_code == 200
-    
+
 #To launch script : nosetest test_api_nose.py (Le truc cool on va chercher l'URL)

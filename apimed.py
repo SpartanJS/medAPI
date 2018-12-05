@@ -1,35 +1,18 @@
-#! usr/bin/flaskenv python3
+#! usr/bin/medAPIenv python3
 # -*-coding:Utf-8 -*
 """ Infos : Medsense API
 
-version : v0.0.2 alpha
-date :
-description : Flask API "MVP" for Medsense API
-Packages : flask, flask_restplus
-Tasks : - Create the light DTO & DAO for Medsense API
-        - Create a Blank Page with a Button to POST data on API
-Endpoints : - GET /apiv1/responses
-            - GET /apiv1/responses/<responses_id>
-Issues : ?
-Steps : 1) Canvas of the Flask/flask_restplus
-        2) Define the endpoints GET/GETALL
-        3) Define the DAO (Get/create/update/delete) to point the examples (replaced after with DB)
-        4) Define the DTO/Model
-        5) Define the others endpoints POST/UPDATE/DELETE + Define DAO DTO for Update Delete
+## version : v0.0.3 alpha
 
-Important : Pour afficher "joliment" on utilise "skip_none" = True
-Si on souhaite bosser correctement sur le model (Versions ultérieures
-on devrait passer "skip_none" = False
+**Date** : 4 décember 2018
+**Description** : Flask API "MVP" for Medsense API
+**Packages** : flask, flask_restpluos
+**Task** :
+- [x] Create a "Simple" SGBDR cf paper with 3 tables
+- [ ] Create the service that link the model(psql) to psqlDB
+- [ ] Connect the API to the SGBDR
+- [ ] Update the Push button to POST data on DB
 
-------------
-version : v0.0.1
-description : Flask API Canvas for Medsense API
-packages : flask, flask_restplus
-tasks : - create a canvas
-        - define the endpoint : /api/v1/responses
-        - define the endpoint : /api/v1/responses/<responses_id>
-        - start a good docstring
-Issue : curl answer don't take accent on french words
 """
 from collections import OrderedDict
 import requests as rq
@@ -66,23 +49,9 @@ responses_dict = {
 }
 """
 
-""" DTO Object
-
-Formating the Json that we received
-Responses DTO Model :
-{
-    id : string
-    href : Url
-    questions : [ {
-        id : String
-        text : String
-        answer_id : String
-        answer_text : String
-        answer_score : Integer
-                    }]
-}
-
-"""
+############################################################################
+##########                       DTO (cf data.py)                   ########
+############################################################################
 questions_fields = api.model('Questions', {
     'id': fields.String(attribute='q_id'),
     'text': fields.String,
@@ -97,7 +66,9 @@ responses_fields = api.model('ResponsesDTO',
         'questions': fields.List(fields.Nested(questions_fields, skip_none=True)),
     })
 
-
+############################################################################
+##########                       DAO                                ########
+############################################################################
 class ResponsesDAO(object):
     """ DAO Object : Responses
 
@@ -157,6 +128,9 @@ DAO.create(data.alex)
 DAO.create(data.aline)
 
 
+############################################################################
+##########      Flask Rest Plus Endpoints                           ########
+############################################################################
 @ns.route('/responses')
 class ResponsesList(Resource):
     """ Resource : ResponsesList
@@ -226,6 +200,9 @@ class Responses(Resource):
 #api.add_resource(Responses,'/api/v1/responses/<responses_id>')
 
 
+############################################################################
+##########                Flask Endpoints                           ########
+############################################################################
 @app.route("/test")
 def hello():
     """ Test function for the Flask module """

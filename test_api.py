@@ -1,4 +1,4 @@
-#! usr/bin/flaskenv python3
+#! usr/bin/medAPIenv python3
 # -*-coding:Utf-8 -*
 """ Infos : Medsense API Unittest
 
