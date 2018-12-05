@@ -114,7 +114,8 @@ def hello():
 
 @app.route("/postdb")
 def post_test():
-    return save_new_answers(data=alex)
+    """ We try with a simple example without function to post data"""
+    #return save_new_answers(data=alex)
 
 if __name__=="__main__":
     app.run(debug = True)
