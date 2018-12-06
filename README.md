@@ -1,5 +1,20 @@
 # medAPI
 
+## version : v0.0.3 gamma
+
+**Date** : 4 décember 2018
+
+**Description** : Flask API "MVP" for Medsense API
+
+**Packages** : flask, flask_restpluos
+
+**Task** :
+- [x] Create a "Simple" SGBDR cf paper with 3 tables
+- [x] Create the service that link the model(psql) to psqlDB
+- [X] Connect the API to the SGBDR
+- [X] Update the Push button to POST data on DB
+
+----------------------------------------------------
 ## version : v0.0.3 alpha
 
 **Date** : 4 décember 2018

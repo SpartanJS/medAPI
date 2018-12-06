@@ -2,15 +2,10 @@
 # -*-coding:Utf-8 -*
 """ Infos : Medsense API
 
-version : v0.0.3 alpha
-date : 4 décember 2018
-description : Flask API "MVP" for Medsense API
-Packages : flask, flask_restpluos
-Task :
-- [x] Create a "Simple" SGBDR cf paper with 3 tables
-- [x] Create the service that link the model(psql) to psqlDB
-- [ ] Connect the API to the SGBDR
-- [ ] Update the Push button to POST data on DB
+version : v0.0.3 gamma
+date : 5 décember 2018
+description : Testing the DB functionnalities
+
 """
 import uuid
 import datetime
@@ -120,6 +115,8 @@ def post_test():
     data = alex
     #todo : Faudrai créeer une boucle avec une liste pour les questionstb
     #>>> question[i]
+
+    #Questions : je peux créer en amont ?
     questions_1 = QuestionsTable(
         q_id=data['questions'][0]['q_id'],
         q_text='Vous sentiez vous enthousiaste ?'

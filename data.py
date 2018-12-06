@@ -80,6 +80,33 @@ aline = {
                     ]
         }
 
+alice = {
+        #'id': 'resp2',
+        #'href': '/api/responses/r2',
+        'questions': [
+                        {
+                        'q_id':'qxxx',
+                        'text': 'xxx',
+                        'answer_id':'axxx',
+                        'answer_text':'xxx',
+                        'answer_score': 999
+                        },
+                        {
+                        'q_id':'qxxx',
+                        'text': 'xxx',
+                        'answer_id':'a20',
+                        'answer_text':'xxx',
+                        'answer_score': 999
+                        },
+                        {
+                        'q_id':'qxxx',
+                        'text': 'xxx',
+                        'answer_id':'axxx',
+                        'answer_text':'xxx',
+                        'answer_score': 999
+                        }
+                    ]
+        }
 """ Test pour le 'TestButton' """
 payload = {"questions": [{"q_id":"q100","answer_id":"a100","answer_score":50},{"q_id":"q200","answer_id":"a200","answer_score":40},{"q_id":"q300","answer_id":"a300","answer_score":60}]}
 url = 'http://localhost:5000/apiv1/responses'
@@ -97,4 +124,9 @@ curl http://localhost:5000/apiv1/responses/resp3 -d '{"questions":[{"q_id":"UPDA
 
 DELETE /responses/responsesid
 curl http://localhost:5000/apiv1/responses/resp3 -X DELETE
+
+POST DB :
+curl http://localhost:5000/postdb -d '{"questions": [{"q_id":"q1","answer_id":"a100","answer_score":50},{"q_id":"q2","answer_id":"a200","answer_score":40},{"q_id":"q3","answer_id":"a300","answer_score":60}]}' -X POST -H "Content-Type: application/json"
+
+
 """
