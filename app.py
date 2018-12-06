@@ -6,9 +6,11 @@ version : v0.0.3 alpha
 date : 4 décember 2018
 description : Flask API "MVP" for Medsense API
 Packages : flask, flask_restpluos
-Task : - Create a "Simple" SGBDR cf paper with 3 tables
-       - Connect the API to the SGBDR
-       - Update the Push button to POST data on DB
+Task :
+- [x] Create a "Simple" SGBDR cf paper with 3 tables
+- [x] Create the service that link the model(psql) to psqlDB
+- [ ] Connect the API to the SGBDR
+- [ ] Update the Push button to POST data on DB
 """
 import uuid
 import datetime
@@ -79,7 +81,7 @@ alex_noob = {
 }
 alex = {
         'r_id': 'resp1',
-        #'href': '/api/responses/r1',
+        'href': '/api/responses/r1',
         'questions': [
                         {
                         'q_id':'q1',
@@ -115,6 +117,57 @@ def hello():
 @app.route("/postdb")
 def post_test():
     """ We try with a simple example without function to post data"""
+    data = alex
+    #todo : Faudrai créeer une boucle avec une liste pour les questionstb
+    #>>> question[i]
+    questions_1 = QuestionsTable(
+        q_id=data['questions'][0]['q_id'],
+        q_text='Vous sentiez vous enthousiaste ?'
+        )
+    questions_2 = QuestionsTable(
+        q_id=data['questions'][1]['q_id'],
+        q_text='Avez vous beaucoup d energie ?'
+    )
+    questions_3 = QuestionsTable(
+        q_id=data['questions'][2]['q_id'],
+        q_text='Avez vous l impression d etre epuise ?'
+    )
+    responses_1 = ResponsesTable(
+        r_id=data['r_id'],
+        href=data['href']
+    )
+    AnswersTable(
+        a_id=data['questions'][0]['answer_id'],
+        a_text=data['questions'][0]['answer_text'],
+        a_score=data['questions'][0]['answer_score'],
+        responsestable=responses_1,
+        questionstable=questions_1
+    )
+    AnswersTable(
+        a_id=data['questions'][1]['answer_id'],
+        a_text=data['questions'][1]['answer_text'],
+        a_score=data['questions'][1]['answer_score'],
+        responsestable=responses_1,
+        questionstable=questions_2
+    )
+    AnswersTable(
+        a_id=data['questions'][2]['answer_id'],
+        a_text=data['questions'][2]['answer_text'],
+        a_score=data['questions'][2]['answer_score'],
+        responsestable=responses_1,
+        questionstable=questions_3
+    )
+    db.session.add(questions_1)
+    db.session.add(questions_2)
+    db.session.add(questions_3)
+    db.session.add(responses_1)
+    db.session.commit()
+    return "Done"
+
+    #SELECT * FROM answerstable, responsestable, questionstable WHERE
+    # answerstable.response_id=responsestable.r_id AND
+    # answerstable.questions_id=questionstable.q_id
+
     #return save_new_answers(data=alex)
 
 if __name__=="__main__":
