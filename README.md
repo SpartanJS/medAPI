@@ -4,12 +4,14 @@
 
 **Date** : 14 december 2018
 
-**Description** : API Refactor (MVP Pattern)
+**Description** : API Refactor (MVC Pattern)
+
+**Erratum** : MVP > MVC Pattern
 
 **Task** :
 - [X] Referencement List v 0.0.1
 - [X] Refactoring to MVP
-- [X] Deploy to master 
+- [X] Deploy to master
 
 
 ## version : v0.0.4 gamma
