@@ -4,27 +4,48 @@
 
 ### Architecture:
 
-- /medapp
--   |--- init.py
--   |--- manage.py
--   |--- requirements.txt
--   |--- /test
-+          |--- responses_tests.py
-+          |--- responses_tests_nose.py
--   |--- /main
--          |--- init.py
--          |--- config.py > Config db dev,test, prod
--          |--- /controller
--                   |--- init.py
--                   |--- responses_controller.py
--          |--- /model  
--                   |--- init.py
--                   |--- responses_model.py    
--          |--- /service
--                   |--- init.py
--                   |--- responses_service.py
--          |--- /utils
--                   |--- responses_DTO.py
+ /medapp
+
+   |--- init.py
+
+   |--- manage.py
+
+   |--- requirements.txt
+
+   |--- /test
+
+          |--- responses_tests.py
+
+          |--- responses_tests_nose.py
+
+   |--- /main
+
+          |--- init.py
+
+          |--- config.py > Config db dev,test, prod
+
+          |--- /controller
+
+                   |--- init.py
+
+                   |--- responses_controller.py
+
+          |--- /model  
+
+                   |--- init.py
+
+                   |--- responses_model.py    
+
+          |--- /service
+
+                   |--- init.py
+
+                   |--- responses_service.py
+
+          |--- /utils
+
+                   |--- responses_DTO.py
+                   
 
 ----------------------------------------
 
