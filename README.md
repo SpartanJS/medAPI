@@ -10,7 +10,7 @@
 
 **Task** :
 - [X] Referencement List v 0.0.1
-- [X] Refactoring to MVP
+- [X] Refactoring to MVC
 - [X] Deploy to master
 
 
