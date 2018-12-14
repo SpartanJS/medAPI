@@ -1,6 +1,18 @@
 # medAPI
 
-## version : v0.0.4
+## version : v0.0.4 gamma
+
+**Date** : 14 december 2018
+
+**Description** : MAJ Referencement List to data
+
+**Task** :
+- [ ] Prepararing MVC architecture of the API
+- [X] Referencement List v 0.0.1
+
+----------------------------------------------------
+
+## version : v0.0.4 beta
 
 **Date** : 14 december 2018
 
@@ -10,6 +22,7 @@
 - [ ] Prepararing MVC architecture of the API
 - [ ] Referencement List v 0.0.1
 
+----------------------------------------------------
 
 ## version : v0.0.3 gamma
 

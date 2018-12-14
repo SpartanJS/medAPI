@@ -9,8 +9,8 @@
 -   |--- manage.py
 -   |--- requirements.txt
 -   |--- /test
--          |--- responses_tests.py
--          |--- responses_tests_nose.py
++          |--- responses_tests.py
++          |--- responses_tests_nose.py
 -   |--- /main
 -          |--- init.py
 -          |--- config.py > Config db dev,test, prod
@@ -28,7 +28,7 @@
 
 ----------------------------------------
 
-###responses_model.py
+### responses_model.py
 
 **Table attribute:**
 - a_ : answers
@@ -39,12 +39,15 @@
 - p_ : patients
 
 **TableClassName:** ResponsesTable
+
 **TableName:** responsestable
+
 **TableRelationship:** r_table
+
 
 ----------------------------------------
 
-###responses_controller.py
+### responses_controller.py
 
 **Responses endpoints:**
 - /responses
@@ -52,7 +55,7 @@
 
 ----------------------------------------
 
-###responses_service.py
+### responses_service.py
 
 **Responses services:**
 - save_new_responses()
