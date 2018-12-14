@@ -368,7 +368,7 @@ def postdb():
     db.session.add(responses_1)
     db.session.commit()
 
-    return render_template('resultdb.html',data=data)
+    return render_template('resultdb.html',data=data),201
 
 if __name__ == "__main__":
     app.run(debug=True)
