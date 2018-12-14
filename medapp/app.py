@@ -3,12 +3,19 @@
 
 """ Infos : Medsense API
 
-Version : v0.0.4
+Version : v0.1.0
 Date : 14 december 2018
-Description : MVC pattern API
+Short Description : API Refactor (MVP Pattern)
+
+Description : medapp launcher >>> python app.py
+Package : -
+Functions : -
+
+Content
+-------
+None 
 
 Current Folder : MEDAPP
-
 medapp/app.py
 
 """

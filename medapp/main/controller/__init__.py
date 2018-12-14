@@ -15,7 +15,7 @@ Content
 -------
 None
 
-Current Folder : MEDAPP
-medapp/__init__.py
+Current Folder : CONTROLLER
+medapp/main/controller/__init__.py
 
 """

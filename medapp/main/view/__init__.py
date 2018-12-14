@@ -3,13 +3,19 @@
 
 """ Infos : Medsense API
 
-Version : v0.0.4
+Version : v0.1.0
 Date : 14 december 2018
-Description : MVC pattern API
+Short Description : API Refactor (MVP Pattern)
 
-Views of the app
+Description : __init__ file
+Package : -
+Functions : -
+
+Content
+-------
+None
 
 Current Folder : VIEW
-/medapp/main/view/__init__.py
+medapp/main/view/__init__.py
 
 """

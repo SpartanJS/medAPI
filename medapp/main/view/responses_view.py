@@ -3,17 +3,21 @@
 
 """ Infos : Medsense API
 
-Version : v0.0.4
+Version : v0.1.0
 Date : 14 december 2018
-Description : MVC pattern API
+Short Description : API Refactor (MVP Pattern)
 
-Views of the app
+Description : Views of the app
+Package : flask
+Functions : Flask, render_template
 
-packages : flask
-functions : Flask, render_template
+Content
+-------
+/test --- Test Flask Basic
+/index --- Test Flask Template 
 
 Current Folder : VIEW
-/medapp/main/view/responses_app.py
+/medapp/main/view/responses_view.py
 
 """
 

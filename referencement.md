@@ -2,6 +2,8 @@
 
 ## version : v0.0.1
 
+### DB Name : medsense_dev_app
+
 ### Architecture:
 
  /medapp
@@ -45,7 +47,7 @@
           |--- /utils
 
                    |--- responses_DTO.py
-                   
+
 
 ----------------------------------------
 

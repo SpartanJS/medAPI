@@ -3,12 +3,26 @@
 
 """ Infos : Medsense API
 
-Version : v0.0.4
+Version : v0.1.0
 Date : 14 december 2018
+Short Description : API Refactor (MVP Pattern)
 
-Description : MVC pattern API
+Description : configuration for Dev,Testing & Prod environment
+Package : os
+Functions : -
+
+Content
+-------
+<DevelopmentConfig>
+<TestingConfig>
+<ProductionConfig>
+CONFIGS : dict (configs)
+
+Current Folder : MAIN
+medapp/main/config.py
 
 """
+
 
 import os
 
