@@ -7,14 +7,9 @@ Version : v0.0.4
 Date : 14 december 2018
 Description : MVC pattern API
 
-Current Folder : MEDAPP
+Views of the app
 
-medapp/app.py
+Current Folder : VIEW
+/medapp/main/view/__init__.py
 
 """
-
-from main import app
-
-
-if __name__ == '__main__':
-    app.run(debug = True)

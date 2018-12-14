@@ -8,15 +8,17 @@ Date : 14 december 2018
 
 Description : MVC pattern API
 
+Current Folder : MEDAPP 
+
+/medapp/manage.py
+
 """
 
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 
-from app import app
-
 #Package main
-from main import db
+from main import db,app
 
 #TODO : modifier le config_name > creer __init__.py dans /medapp avec le nom
 
