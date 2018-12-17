@@ -1,5 +1,16 @@
 # medAPI
 
+## version : v 0.1.1
+
+**Date** : 17 december 2018
+
+**Description** : API + Webapp Canvas
+
+**Task** :
+- [X] Deploying a webapp to interact with the API
+
+----------------------------------------------------
+
 ## version : v0.1.0
 
 **Date** : 14 december 2018
@@ -13,6 +24,7 @@
 - [X] Refactoring to MVC
 - [X] Deploy to master
 
+----------------------------------------------------
 
 ## version : v0.0.4 gamma
 

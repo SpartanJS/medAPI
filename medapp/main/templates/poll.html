@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <p> Hey ! Thank you for voting for {{ request.form['field_1'] }} & {{ request.form['field_2'] }}</p>
+  <form action ='/result'>
+    <input type='submit' value='Results'>
+  </form>
+
+  <h2> <pre> {{ data }} </pre></h2>
+</body>
+</html>

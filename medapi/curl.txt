@@ -1,0 +1,2 @@
+Test POST data > ResponsesTable
+curl 'http://127.0.0.1:5000/v1/responses' -d '{"r_public_id":"alex","r_admin":"alex"}' -X POST -H 'Content-Type: application/json'

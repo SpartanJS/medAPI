@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <h1> Medical Survey</h1>
+</head>
+<body>
+  {% for i in data: %}
+  <form action='/poll' method='POST'>
+    <h2> {{ data[i].question}} </h2>
+    {% for field in data[i]['answers']: %}
+      <input type="radio" name="field_{{i}}" value="{{ field }}">{{ field }}
+      <br>
+    {% endfor %}
+  {% endfor %}
+    <br>
+    <br>
+    <input type='submit' value='Vote'>
+  </form>
 
-  <head>
-  </head>
 
-  <body>
-    <h1> Hello bienvenue sur l'API Medsense </h1>
-    <h2> Version : v0.1.0 </h2>
-    <h2> Date : 14 december 2018 </h2>
-    <h2> {{ data }} </h2>
-
-  </body>
+</body>
 </html>

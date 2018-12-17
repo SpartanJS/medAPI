@@ -1,11 +1,11 @@
 #! usr/bin/medAPIenv python3
 # -*-coding:Utf-8 -*
 
-""" Infos : Medsense API
+""" Infos : Medsense Application
 
-Version : v0.1.0
-Date : 14 december 2018
-Short Description : API Refactor (MVP Pattern)
+Version : v0.1.1
+Date : 17 december 2018
+Short Description : Application avec formulaires connectée avec medAPI
 
 Description : __init__ file
 Package : -
