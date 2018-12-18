@@ -1,10 +1,21 @@
 # medAPI
 
+## version : v 0.1.3
+
+**Date** : 18 december 2018
+
+**Description** : API + webapp
+
+**Task** :
+- [ ] Update the medAPP model and service
+
+----------------------------------------------------
+
 ## version : v 0.1.2
 
 **Date** : 18 december 2018
 
-** Description** : API + webapp
+**Description** : API + webapp
 
 **Task** :
 - [X] Form with some questions
