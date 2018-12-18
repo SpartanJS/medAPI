@@ -1,5 +1,16 @@
 # medAPI
 
+## version : v 0.1.2
+
+**Date** : 18 december 2018
+
+** Description** : API + webapp
+
+**Task** :
+- [X] Form with some questions
+
+----------------------------------------------------
+
 ## version : v 0.1.1
 
 **Date** : 17 december 2018

@@ -6,7 +6,8 @@
 <body>
   {% for i in data: %}
   <form action='/poll' method='POST'>
-    <h2> {{ data[i].question}} </h2>
+    <h2> {{ data[i].intro}} </h2>
+    <h2> {{ data[i].questions}} </h2>
     {% for field in data[i]['answers']: %}
       <input type="radio" name="field_{{i}}" value="{{ field }}">{{ field }}
       <br>

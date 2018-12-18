@@ -24,18 +24,7 @@ import requests as rq
 from flask import Flask, render_template, request
 
 from main import app
-
-dict_poll = {
-    1 : {
-            'question' : 'Qui est l auteur?',
-            'answers' : ['Alex', 'Aline', 'Alice']
-        },
-    2 : {
-            'question' : 'Qui est l admin ?',
-            'answers' : ['Alex', 'Aline', 'Alice']
-        }
-    }
-
+from main.utils.sf36_form import dict_sf36, sf36_questions
 
 @app.route('/')
 @app.route('/test')
@@ -45,7 +34,7 @@ def test():
 
 @app.route('/index')
 def index():
-    return render_template('index.html', data=dict_poll)
+    return render_template('index.html', data=sf36_questions)
 
 @app.route("/poll", methods = ['POST'])
 def poll():
