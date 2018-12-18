@@ -18,6 +18,8 @@ None
 Current Folder : UTILS
 medapp/main/utils/__init__.py
 
+ATTention : modification par rapport au SF36_form.py de medAPP (questions[0])
+
 """
 
 dict_sf36 = {
@@ -33,6 +35,12 @@ dict_sf36 = {
 
 
 sf36_questions = {
+    0: {
+        'questions': 'test question ?',
+        'answers': [
+                    'answers1'
+                    ]
+        },
     1: {
         'questions': 'En général, diriez-vous que votre santé est :',
         'answers': [

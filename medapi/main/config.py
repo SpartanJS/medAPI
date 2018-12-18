@@ -38,7 +38,7 @@ class DevelopmentConfig(Config):
     USER = 'alex'
     PASSWORD = 'password'
     HOST = 'localhost'
-    DATABASE ='medsense_dev_db'
+    DATABASE ='medsense_dev_db2'
 
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = f"postgresql://{USER}:{PASSWORD}@{HOST}/{DATABASE}"

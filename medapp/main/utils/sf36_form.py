@@ -31,8 +31,9 @@ dict_sf36 = {
         }
     }
 
-
+#Attention : pas de sf36_questions[0]
 sf36_questions = {
+
     1: {
         'questions': 'En général, diriez-vous que votre santé est :',
         'answers': [
