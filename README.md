@@ -1,5 +1,17 @@
 # medAPI
 
+
+## version : v 0.1.4
+
+**Date** : 19 december 2018
+
+**Description** : Functionnal MVP (App + api), adding template, colors, fun
+
+**Task** :
+- [X] Adding a template to Medapp
+
+----------------------------------------------------
+
 ## version : v 0.1.3
 
 **Date** : 19 december 2018
