@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <h1> Medical Survey lol</h1>
+  <!-- Custom button for this template-->
+  <link href="/static/css/md-radio.css" rel="stylesheet" type="text/css">
+  <link href="/static/css/md-button.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
-  {% for i in data: %}
-  <form action='/poll' method='POST'>
-    <h2> {{ data[i].intro}} </h2>
-    <h2> {{ data[i].questions}} </h2>
-    {% for question in data[i]['answers']: %}
-      <input type="radio" name="q{{i}}" value="{{ question }}">{{ question }}
-      <br>
-    {% endfor %}
-  {% endfor %}
-    <br>
-    <br>
-    <input type='submit' value='Vote'>
-  </form>
+
+
+  <section>
+    <h2><font color="#2196f3"><u>Exemple questionnaire patient</u></font> </h2>
+    <div> <br> </div>
+    <div>
+      <form action='/poll' method='POST'>
+        {% for i in data: %}
+          <div>
+            <font size="+1" color="#2196f3"> <b> {{ data[i].intro}}  </b></font>
+            <br>
+            <font size="+1" > <b> {{ data[i].questions}} </b> </font>
+          </div>
+
+          {% for question in data[i]['answers']: %}
+            <div class="md-radio md-radio-inline">
+              <input type="radio" id="q{{i}}_{{question}}" name="q{{i}}" value="{{ question }}">
+              <label for="q{{i}}_{{question}}">{{ question }}</label>
+            </div>
+          {% endfor %}
+
+        {% endfor %}
+        <div >
+          <br>
+          <input class="pure-material-button-contained" type='submit' value='Vote'>
+        </div>
+      </form>
+    </div>
+  </section>
+
 
 
 </body>

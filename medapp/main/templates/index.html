@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Dashboard</title>
+    <title>Medsense Survey</title>
 
     <!-- Bootstrap core CSS-->
     <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     <link href="/static/css/sb-admin.css" rel="stylesheet">
 
     <!-- Custom button for this template-->
-    <link href="/static/css/button.css" rel="stylesheet">
+    <link href="/static/css/button_md.css" rel="stylesheet" type="text/css">
 
 
   </head>
@@ -217,7 +217,9 @@
               Survey example</div>
             <div class="card-body">
 
-              <button class="pure-material-button-contained">Button</button>
+
+              <button class="pure-material-button-contained">Test</button>
+              <button class="button-test">Yeah</button>
               {% for i in data: %}
               <form action='/poll' method='POST'>
                 <b> {{ data[i].intro}} </b>

@@ -28,6 +28,7 @@ from flask import Flask, render_template, request
 
 from main import app
 from main.utils.sf36_form import dict_sf36, sf36_questions
+from main.utils.sf36_form_short import sf36_questions_short
 
 @app.route('/')
 @app.route('/test')
@@ -37,7 +38,8 @@ def test():
 
 @app.route('/index')
 def index():
-    return render_template('index.html', data=sf36_questions)
+    """ TO modify to have a short version (1 page)> sf36_questions_short"""
+    return render_template('index_alex.html', data=sf36_questions)
 
 COUNTER = 0
 @app.route("/poll", methods = ['POST'])
@@ -76,9 +78,9 @@ def poll():
                 'a_score':100} for i in range(1,13)]
     }
     app.logger.info(payload)
-
+    """
     r = rq.post('http://127.0.0.1:5000/v1/responses', json=payload)
     app.logger.info(r)
     r_content = r._content.decode("utf-8")
-
+    """
     return render_template('poll.html',data=r_content)

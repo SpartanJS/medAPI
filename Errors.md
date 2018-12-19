@@ -10,3 +10,5 @@
 #4 model : Don t forget to re-read correctly the name of the TABLE
 
 #5 Model : Care of type of x_id(Normal > db.String / Autoincrement > db.Integer)
+
+#6 CSS : CTRL + Shift + R to Reload CSS

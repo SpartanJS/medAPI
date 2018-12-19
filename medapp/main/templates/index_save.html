@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Custom button for this template-->
+  <link href="/static/css/md-radio.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+
+  {% for i in data: %}
+  <form action='/poll' method='POST'>
+    <h2> {{ data[i].intro}} </h2>
+    <h2> {{ data[i].questions}} </h2>
+    {% for question in data[i]['answers']: %}
+      <input type="radio" name="q{{i}}" value="{{ question }}">{{ question }}
+      <br>
+    {% endfor %}
+  {% endfor %}
+    <br>
+    <br>
+    <input type='submit' value='Vote'>
+  </form>
+
+
+</body>
+</html>
