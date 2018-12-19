@@ -2,12 +2,12 @@
 
 ## version : v 0.1.3
 
-**Date** : 18 december 2018
+**Date** : 19 december 2018
 
-**Description** : API + webapp
+**Description** : Functionnal MVP (App + api)
 
 **Task** :
-- [ ] Update the medAPP model and service
+- [X] Update the medAPP model and service
 
 ----------------------------------------------------
 

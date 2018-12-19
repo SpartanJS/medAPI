@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <h1> Medical Survey</h1>
+  <h1> Medical Survey lol</h1>
 </head>
 <body>
   {% for i in data: %}
   <form action='/poll' method='POST'>
     <h2> {{ data[i].intro}} </h2>
     <h2> {{ data[i].questions}} </h2>
-    {% for field in data[i]['answers']: %}
-      <input type="radio" name="field_{{i}}" value="{{ field }}">{{ field }}
+    {% for question in data[i]['answers']: %}
+      <input type="radio" name="q{{i}}" value="{{ question }}">{{ question }}
       <br>
     {% endfor %}
   {% endfor %}

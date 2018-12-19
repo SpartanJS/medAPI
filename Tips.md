@@ -11,3 +11,10 @@
 #2 Linking 2 tables with a couple of foreign key(=composite key)
 - Use db.ForeignKeyConstraint( [FK1, FK2],[other_table.FK1, other_table.FK2])
 - Use primaryjoin in db.relationship(...primaryjoin="(table.FK1==other_table.FK1)&(table...)")
+
+#3 Modify a template, reload the page and do no use the back button
+
+#4 TO CHECK
+for name, age in dictionary.items():   
+    if age == search_age:
+        print(name)

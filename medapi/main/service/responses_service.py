@@ -49,7 +49,7 @@ def save_new_responses(data):
     new_responses = ResponsesTable(
         r_public_id=data['r_public_id']
     )
-    app.logger.info(data['questions'][1])
+    app.logger.info(data['questions'][10])
     new_answers_list = []
     for ans in data['questions']:
         new_answers = AnswersTable(

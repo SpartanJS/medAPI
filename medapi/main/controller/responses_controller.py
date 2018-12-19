@@ -44,7 +44,7 @@ Create 3 types of endpoint Delete
 Create a delete_service ?
 
 TODO : Function to verify if data are initialized
-
+TODO : DTO >> By the time we are not using the DTO
 """
 
 from flask import request
@@ -60,7 +60,7 @@ from main import app
 from main.model.responses_model import test_question
 from main.service.initialization_service import test_autoincrement
 
-from main.service.initialization_service import INIT_DICT, questionstable_init, surveystable_init, offeredanswerstable_init
+from main.service.initialization_service import INIT_DICT, questionstable_init, surveystable_init, offeredanswerstable_init,surveysquestionsanswers_init
 
 
 #api = ResponsesDTO.api
@@ -80,7 +80,7 @@ class ResponsesList(Resource):
     """
 
     @ns.doc('list_responses')
-    @ns.marshal_with(responses_fields, skip_none=False)
+    #@ns.marshal_with(responses_fields, skip_none=False)
     def get(self):
         """Instance method to read all responses"""
         return get_all_responses()
@@ -91,7 +91,7 @@ class ResponsesList(Resource):
     #@ns.marshal_with(responses_fields, skip_none=False)
     def post(self):
         """Instance method do create a new responses"""
-
+        """ C ETAIT COOL POUR LES TESTS DE L API : NOW TCHAOOO
         data = {
             'r_public_id': 'resp1',
             'questions':[
@@ -121,9 +121,10 @@ class ResponsesList(Resource):
                     }
                 ]
         }
+        """
         app.logger.info(api.payload)
         #return save_new_responses(data)
-        return save_new_responses(data)
+        return save_new_responses(api.payload)
 
 
 @ns.route('/initdata')
@@ -134,11 +135,12 @@ class InitData(Resource):
         delete_all_surveysquestions()
         delete_all_questions()
         delete_all_surveys()
-        delete_all_offeredanswers()
+        #delete_all_offeredanswers() #Attention c dangeuteux manomanomano
 
         questionstable_init()
         surveystable_init()
         offeredanswerstable_init()
+        surveysquestionsanswers_init()
         return 'Initialized'
 
 @ns.route('/deletedata')

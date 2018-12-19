@@ -35,7 +35,7 @@ from main import db
 
 from main.model.responses_model import QuestionsTable, OfferedAnswersTable, SurveysTable, SurveysQuestionsTable
 from main.utils.sf36_form import sf36_questions
-
+from main.model.responses_model import SurveysQuestionsAnswersTable
 #Test
 from main import app
 from main.model.responses_model import ResponsesTable
@@ -71,8 +71,20 @@ for oans in oa_list:
     offeredanswers_sf36.append(offeredanswers)
 
 surveysquestionsanswers_sf36 = []
-#TODO
-
+#TODO à la mano(pas de reflexion) MANO MANO MANO
+surveysquestionsanswers_sf36.append(SurveysQuestionsAnswersTable(s_id='s1',q_id='q1', oa_id=45))
+surveysquestionsanswers_sf36.append(SurveysQuestionsAnswersTable(s_id='s1',q_id='q1', oa_id=46))
+surveysquestionsanswers_sf36.append(SurveysQuestionsAnswersTable(s_id='s1',q_id='q1', oa_id=47))
+surveysquestionsanswers_sf36.append(SurveysQuestionsAnswersTable(s_id='s1',q_id='q1', oa_id=48))
+surveysquestionsanswers_sf36.append(SurveysQuestionsAnswersTable(s_id='s1',q_id='q1', oa_id=49))
+surveysquestionsanswers_sf36.append(SurveysQuestionsAnswersTable(s_id='s1',q_id='q2', oa_id=50))
+surveysquestionsanswers_sf36.append(SurveysQuestionsAnswersTable(s_id='s1',q_id='q2', oa_id=51))
+surveysquestionsanswers_sf36.append(SurveysQuestionsAnswersTable(s_id='s1',q_id='q2', oa_id=52))
+surveysquestionsanswers_sf36.append(SurveysQuestionsAnswersTable(s_id='s1',q_id='q2', oa_id=53))
+surveysquestionsanswers_sf36.append(SurveysQuestionsAnswersTable(s_id='s1',q_id='q2', oa_id=54))
+for i in range(3,13):
+    for j in range (55,58):
+        surveysquestionsanswers_sf36.append(SurveysQuestionsAnswersTable(s_id='s1',q_id=f"q{i}",oa_id=j))
 
 def questionstable_init():
     for quest in questions_sf36:
@@ -92,7 +104,10 @@ def offeredanswerstable_init():
     return 'Initialized', app.logger.info('SurveysTable : Initialized')
 
 def surveysquestionsanswers_init():
-    return ""
+    for sqa in surveysquestionsanswers_sf36:
+        db.session.add(sqa)
+    db.session.commit()
+    return 'Initialized', app.logger.info('SurveysTable : Initialized')
 
 #Pas besoin de surveysquestions_initialization(), il s'initialise avec les autres
 #Pas besion d'initializer les tables de foreign key !
